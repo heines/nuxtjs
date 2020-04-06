@@ -39,6 +39,11 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'My custom description'
+        },
+        {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
         }
       ]
     }

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 export default {
   mode: 'universal',
   /*
@@ -13,15 +15,46 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'TOP',
+    titleTemplate: `%s - ${process.env.TITLE}`,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.DEFAULT_DESCRIPTION || ''
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: oricess.env.TITLE || ''
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: process.env.BASE_URL
       }
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: oricess.env.TITLE || ''
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: process.env.DEFAULT_DESCRIPTION || ''
+      }
+      // {
+      //   hid: 'og:image',
+      //   property: 'og:image',
+      //   content: `${baseOgp}/common.jpg`
+      // },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
