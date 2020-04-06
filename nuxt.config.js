@@ -1,6 +1,15 @@
 export default {
   mode: 'universal',
   /*
+   ** Environments
+   */
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  },
+  router: {
+    base: process.env.SUBDIR
+  },
+  /*
    ** Headers of the page
    */
   head: {
@@ -23,7 +32,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    {
+      src: "@/assets/css/main.scss",
+      lang: "scss"
+    }
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -33,7 +47,9 @@ export default {
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/dotenv-module
+    "@nuxtjs/dotenv"
   ],
   /*
    ** Nuxt.js modules
@@ -42,8 +58,15 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    "@nuxtjs/style-resources",
   ],
+  styleResources: {
+    // 指定したSCSSファイルをvueファイル内のstyleタグの中で有効とする
+    scss: [
+      '@/assets/css/foundation/_variables.scss',
+    ]
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
