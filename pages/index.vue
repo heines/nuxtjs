@@ -8,15 +8,14 @@
         |template
       .links
         a.button--green(
-          href = "https://nuxtjs.org/"
-          target="_blank"
-          )
-          |Documentation
-        a.button--grey(
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/heines/nuxtjs"
           target="_blank"
         )
           |GitHub
+        nuxt-link.button--grey(
+          to="next"
+          )
+          |to NEXT page
 </template>
 
 <script>
@@ -28,12 +27,12 @@ export default {
   },
   data() {
     return {
-      title: 'Hello World!'
+      title: 'NUXT'
     }
   },
   head() {
     return {
-      title: this.title,
+      titleTemplate: this.title,
       meta: [
         {
           hid: 'description',
