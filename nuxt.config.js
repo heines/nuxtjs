@@ -4,7 +4,7 @@ export default {
    ** Environments
    */
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
   router: {
     base: process.env.SUBDIR
@@ -34,8 +34,8 @@ export default {
    */
   css: [
     {
-      src: "@/assets/css/main.scss",
-      lang: "scss"
+      src: '@/assets/css/main.scss',
+      lang: 'scss'
     }
   ],
   /*
@@ -49,7 +49,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv"
+    '@nuxtjs/dotenv'
   ],
   /*
    ** Nuxt.js modules
@@ -59,13 +59,11 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    "@nuxtjs/style-resources",
+    '@nuxtjs/style-resources'
   ],
   styleResources: {
     // 指定したSCSSファイルをvueファイル内のstyleタグの中で有効とする
-    scss: [
-      '@/assets/css/foundation/_variables.scss',
-    ]
+    scss: ['@/assets/css/foundation/_variables.scss']
   },
   /*
    ** Axios module configuration
