@@ -1,13 +1,31 @@
 require('dotenv').config();
+// const client = require('./plugins/contentful').default;
 
 export default {
   mode: 'universal',
   /*
+   ** Generate
+   */
+  // generate: {
+  //   routes() {
+  //     return client.getEntries({
+  //       content_type: 'post',
+  //     })
+  //     .then(posts => {
+  //       return [...posts.items.map(post => `/text/${post.fields.url}`)]
+  //     })
+  //   }
+  // },
+  /*
    ** Environments
    */
-  env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
-  },
+   env: {
+     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+     // contentful
+     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
+     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+   },
   router: {
     base: process.env.SUBDIR
   },
@@ -74,7 +92,9 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    'plugins/contentful'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
