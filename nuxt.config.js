@@ -33,17 +33,17 @@ export default {
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: oricess.env.TITLE || ''
+        content: process.env.TITLE || ''
       },
       {
         hid: 'og:url',
         property: 'og:url',
         content: process.env.BASE_URL
-      }
+      },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: oricess.env.TITLE || ''
+        content: process.env.TITLE || ''
       },
       {
         hid: 'og:description',
