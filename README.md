@@ -29,5 +29,5 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 - 本環境ではdotenvを使用して環境変数を管理します。`.env.sample`ファイルをコピーし、`.env`ファイルを各自作成してください。
 ### 特記事項
 - headの記載は、`nuxt.config.js`に初期値が設定できます。ページ毎に変更したい場合、各vueファイルのscript > headにて指定してください。
-- `.env`ファイルにある、contentfulの`CTF_SPACE_ID`, `CTF_CDA_ACCESS_TOKEN`を設定後、`nuxt.config.js`の`const client =~`と`generate:{~}`項のコメントアウトを外す。
+- `.env`ファイルにある、contentfulの`CTF_SPACE_ID`, `CTF_CDA_ACCESS_TOKEN`を設定後、`nuxt.config.js`の`const client =~`と`generate:{~}`項のコメントアウト、及び`/plugins/contentful.js`のコメントアウトを外す。
   - space IDとCDA access tokenがない場合、`TypeError: Expected parameter accessToken`が発生するため。
