@@ -19,16 +19,23 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/Logo.vue';
 
 export default {
   components: {
-    Logo
+    Logo,
   },
   data() {
     return {
-      title: 'NUXT'
-    }
+      title: 'NUXT',
+    };
+  },
+  methods: {
+    test() {
+      console.log('pass');
+      const ans = 1 + 2;
+      return ans;
+    },
   },
   head() {
     return {
@@ -37,17 +44,17 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'My custom description'
+          content: 'My custom description',
         },
         {
           hid: 'og:type',
           property: 'og:type',
-          content: 'website'
-        }
-      ]
-    }
-  }
-}
+          content: 'website',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
