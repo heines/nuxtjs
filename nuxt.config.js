@@ -27,7 +27,7 @@ export default {
      CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
    },
   router: {
-    base: process.env.SUBDIR
+    base: process.env.SUBDIR,
   },
   /*
    ** Headers of the page
@@ -37,44 +37,44 @@ export default {
     titleTemplate: `%s - ${process.env.TITLE}`,
     meta: [
       {
-        charset: 'utf-8'
+        charset: 'utf-8',
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1',
       },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.DEFAULT_DESCRIPTION || ''
+        content: process.env.DEFAULT_DESCRIPTION || '',
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: process.env.TITLE || ''
+        content: process.env.TITLE || '',
       },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: process.env.BASE_URL
+        content: process.env.BASE_URL,
       },
       {
         hid: 'og:title',
         property: 'og:title',
-        content: process.env.TITLE || ''
+        content: process.env.TITLE || '',
       },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: process.env.DEFAULT_DESCRIPTION || ''
-      }
+        content: process.env.DEFAULT_DESCRIPTION || '',
+      },
       // {
       //   hid: 'og:image',
       //   property: 'og:image',
       //   content: `${baseOgp}/common.jpg`
       // },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Customize the progress-bar color
@@ -86,8 +86,8 @@ export default {
   css: [
     {
       src: '@/assets/css/main.scss',
-      lang: 'scss'
-    }
+      lang: 'scss',
+    },
   ],
   /*
    ** Plugins to load before mounting the App
@@ -102,7 +102,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
@@ -112,11 +112,11 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
   ],
   styleResources: {
     // 指定したSCSSファイルをvueファイル内のstyleタグの中で有効とする
-    scss: ['@/assets/css/foundation/_variables.scss']
+    scss: ['@/assets/css/foundation/_variables.scss'],
   },
   /*
    ** Axios module configuration
@@ -134,12 +134,12 @@ export default {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: "pre",
+          enforce: 'pre',
           test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        })
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/,
+        });
       }
-    }
-  }
-}
+    },
+  },
+};
