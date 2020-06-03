@@ -30,13 +30,6 @@ export default {
       title: 'NUXT',
     };
   },
-  methods: {
-    test() {
-      console.log('pass');
-      const ans = 1 + 2;
-      return ans;
-    },
-  },
   head() {
     return {
       titleTemplate: this.title,
