@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      title: 'NEXT',
+      title: 'NEXT'
     };
   },
   head() {
@@ -24,15 +24,15 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'My custom description2',
+          content: 'My custom description2'
         },
         {
           hid: 'og:type',
           property: 'og:type',
-          content: 'article',
-        },
-      ],
+          content: 'article'
+        }
+      ]
     };
-  },
+  }
 };
 </script>
